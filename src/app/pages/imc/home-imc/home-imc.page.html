@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Variáveis - IMC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-label>Altura</ion-label>
+    <ion-input type = "number" placeholder = "Digite sua Altura (cm): " [(ngModel)] = "altura"></ion-input>
+
+  <ion-label>Peso</ion-label>
+    <ion-input type = "number" placeholder = "Digite seu Peso: " [(ngModel)] = "peso"></ion-input>
+    
+  <ion-label>Sexo</ion-label>
+  <ion-item>
+    <ion-select placeholder = "Selecione" [(ngModel)] = "sexo">
+      <ion-select-option value = "f">Feminino</ion-select-option>
+      <ion-select-option value = "m">Masculino</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button (click) = "getValores()" expand = "block" shape = "round">
+    Mostrar
+  </ion-button>
+  <ion-button (click) = "enviar()" expand = "block" shape = "round">
+    Enviar
+  </ion-button>
+
+</ion-content>
